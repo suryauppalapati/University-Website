@@ -2,13 +2,19 @@
 <html lang="en">
 <head>
     <title>LPU University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <section class="header"> 
         <nav class="navbar"> 
             <a href="Index.html"><img src="Assets/logo.png" alt="logo"></a>
-            <div class="navbar__links">
+            <div class="navbar__links" id="navLinks">
+                <i class="fa fa-times" onclick="closeMenu()" ></i>
                 <ul> 
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
@@ -17,8 +23,26 @@
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="openMenu()" ></i>
         </nav>
         
+        <div class="textbox">
+            <h1>India's Largest University</h1>
+            <p>LPU ranks among Top 10 Institutions in India and among top 100 universities of the world by the Times Higher Education Impact Rankings-2022.</p>
+            <a href="https://www.lpu.in/" target="_blank">Click here to know more</a>
+        </div>
     </section>
+
+    <script>
+        let nav = document.getElementById("navLinks");
+
+        function openMenu(){
+            nav.style.right = "0"
+        }
+
+        function closeMenu(){
+            nav.style.right = "-200px"
+        }
+    </script>
 </body>
 </html>

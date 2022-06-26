@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header{
@@ -34,12 +35,172 @@
     display: inline-block;
     text-decoration: none;
     padding: 10px 15px;
-}
+} 
 
 .navbar .navbar__links ul li a{
     text-decoration: none;
     color: white;
 }
 
+.navbar .navbar__links ul li::after{
+ content: '';
+ height: 2px;
+ background: #ef7f1a;
+ margin: auto;
+ width: 0%;
+ display: block;
+ transition: 0.5s;
+}
 
+.navbar .navbar__links ul li:hover::after{
+    width: 100%;
+}
 
+.textbox{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.textbox h1{
+    font-size: 50px;
+    color: #ef7f1a;
+}
+
+.textbox p{
+    font-size: 20px;
+}
+
+.textbox a{
+    font-size: 15px;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 8px 12px;
+    color: white;
+    display: inline-block;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.textbox a:hover{
+    border: 1px solid #ef7f1a;
+    background: #ef7f1a;
+    transition: 1s;
+}
+
+.navbar .fa-bars{
+    display: none;
+}
+
+.navbar .fa-times{
+    float: left;
+    display: none;
+}
+
+@media(max-width: 575px){
+    .textbox h1{
+        font-size: 20px;
+    }
+
+    .textbox p{
+        font-size: 12px;
+    }
+
+    .textbox a{
+        font-size: 10px;
+        padding: 5px 8px;
+        margin-top: 7px;
+    }
+
+    .navbar .navbar__links ul li::after{
+        display: none;
+    }
+
+    .navbar .fa{
+        display: block;
+        margin: 25px; 
+        cursor: pointer; 
+        color: white;
+    }
+
+    .navbar__links{
+        height: 100vh;
+        width: 200px;
+        background: #ef7f1a;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    .navbar .navbar__links ul li{
+        display: block;
+        text-align: left;
+    }
+
+    .navbar .navbar__links ul li:hover{
+        background: #C8660E;
+    }
+
+    .navbar .navbar__links ul{
+        padding: 50px;
+    }
+
+}
+
+@media(min-width: 575px) and (max-width: 768px){
+    .textbox h1{
+        font-size: 40px;
+    }
+
+    .textbox p{
+        font-size: 16px;
+    }
+
+    .textbox a{
+        font-size: 15px;
+        padding: 5px 8px;
+        margin: 8px;
+    }
+
+    .navbar .navbar__links ul li::after{
+        display: none;
+    }
+
+    .navbar .fa{
+        display: block;
+        margin: 25px; 
+        cursor: pointer; 
+        color: white;
+    }
+
+    .navbar__links{
+        height: 100vh;
+        width: 200px;
+        background: #ef7f1a;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    .navbar .navbar__links ul li{
+        display: block;
+        text-align: left;
+    }
+
+    .navbar .navbar__links ul li:hover{
+        background: #C8660E;
+    }
+
+    .navbar .navbar__links ul{
+        padding: 50px;
+    }
+
+}
