@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 .header{
@@ -34,12 +35,307 @@
     display: inline-block;
     text-decoration: none;
     padding: 10px 15px;
-}
+} 
 
 .navbar .navbar__links ul li a{
     text-decoration: none;
     color: white;
 }
 
+.navbar .navbar__links ul li::after{
+ content: '';
+ height: 2px;
+ background: #ef7f1a;
+ margin: auto;
+ width: 0%;
+ display: block;
+ transition: 0.5s;
+}
+
+.navbar .navbar__links ul li:hover::after{
+    width: 100%;
+}
+
+.textbox{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.textbox h1{
+    font-size: 50px;
+    color: #ef7f1a;
+}
+
+.textbox p{
+    font-size: 20px;
+}
+
+.textbox a{
+    font-size: 15px;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 8px 12px;
+    color: white;
+    display: inline-block;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+.textbox a:hover{
+    border: 1px solid #ef7f1a;
+    background: #ef7f1a;
+    transition: 1s;
+}
+
+.navbar .fa-bars{
+    display: none;
+}
+
+.navbar .fa-times{
+    float: left;
+    display: none;
+}
+
+.row{
+    display: flex;
+    margin: 5%;
+    justify-content: space-around;
+}
+
+.course-title{
+    text-align: center;
+}
+
+h1.course-title{
+    margin-top: 5%;
+    font-size: 3em;
+}
+
+.courses p{
+    text-align: center;
+    line-height: 20px;
+    font-style: 14px;
+    font-weight: 300px;
+    padding: 10px;
+}
 
 
+.courses{
+    padding: 20px;
+    flex-basis: 31%;
+    background: #FDF2E8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    transition: 0.5s;
+    margin-bottom: 25px;
+}
+
+.courses:hover{
+    box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.3);
+}
+
+/* Our Campus CSS  */
+.ourcampus{
+    font-size: 3em;
+    text-align: center;
+}
+
+.ourcampus-row{
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+.ourcampus_picture{
+    flex-basis: 30%;
+    position: relative;
+}
+
+.ourcampus_picture img{
+   height: 35rem;
+   width: 100%;
+   border-radius: 5px;
+}
+
+.layer{
+    background: transparent;
+    height: 35rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.layer h1{
+    color: white;
+    width: 100%;
+    bottom: 0;
+    left: 85%;
+    transform: translateX(-50%);
+    position: inherit;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.layer:hover{
+    background: rgb(248,203,163,0.9);
+}
+
+.layer:hover h1{
+    bottom: 50%;
+    opacity: 1;
+}
+
+/* facilities */
+
+.facilities{
+    font-size: 3em;
+    text-align: center;
+}
+
+.facilities-row{
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+.facility-col{
+    flex-basis: 31%;
+    position: relative;
+}
+
+.facility-col img{
+    height: 35rem;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.facility-col .description{
+    padding: 2%;
+}
+
+.facility-col p{
+    color: #988f8f;
+    font-size: 1em;
+    white-space: inherit;
+}
+
+/* -----  media-queries ----- */
+
+@media(max-width: 575px){
+    .textbox h1{
+        font-size: 20px;
+    }
+
+    .textbox p{
+        font-size: 12px;
+    }
+
+    .textbox a{
+        font-size: 10px;
+        padding: 5px 8px;
+        margin-top: 7px;
+    }
+
+    .navbar .navbar__links ul li::after{
+        display: none;
+    }
+
+    .navbar .fa{
+        display: block;
+        margin: 25px; 
+        cursor: pointer; 
+        color: white;
+    }
+
+    .navbar__links{
+        height: 100vh;
+        width: 200px;
+        background: #ef7f1a;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    .navbar .navbar__links ul li{
+        display: block;
+        text-align: left;
+    }
+
+    .navbar .navbar__links ul li:hover{
+        background: #C8660E;
+    }
+
+    .navbar .navbar__links ul{
+        padding: 50px;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+
+}
+
+@media(min-width: 575px) and (max-width: 768px){
+    .textbox h1{
+        font-size: 40px;
+    }
+
+    .textbox p{
+        font-size: 16px;
+    }
+
+    .textbox a{
+        font-size: 15px;
+        padding: 5px 8px;
+        margin: 8px;
+    }
+
+    .navbar .navbar__links ul li::after{
+        display: none;
+    }
+
+    .navbar .fa{
+        display: block;
+        margin: 25px; 
+        cursor: pointer; 
+        color: white;
+    }
+
+    .navbar__links{
+        height: 100vh;
+        width: 200px;
+        background: #ef7f1a;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    .navbar .navbar__links ul li{
+        display: block;
+        text-align: left;
+    }
+
+    .navbar .navbar__links ul li:hover{
+        background: #C8660E;
+    }
+
+    .navbar .navbar__links ul{
+        padding: 50px;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+}

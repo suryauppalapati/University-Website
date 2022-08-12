@@ -2,13 +2,19 @@
 <html lang="en">
 <head>
     <title>LPU University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <section class="header"> 
         <nav class="navbar"> 
             <a href="Index.html"><img src="Assets/logo.png" alt="logo"></a>
-            <div class="navbar__links">
+            <div class="navbar__links" id="navLinks">
+                <i class="fa fa-times" onclick="closeMenu()" ></i>
                 <ul> 
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
@@ -17,8 +23,107 @@
                     <li><a href="#">CONTACT</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="openMenu()" ></i>
         </nav>
         
+        <div class="textbox">
+            <h1>India's Largest University</h1>
+            <p>LPU ranks among Top 10 Institutions in India and among top 100 universities of the world by the Times Higher Education Impact Rankings-2022.</p>
+            <a href="https://www.lpu.in/" target="_blank">Click here to know more</a>
+        </div>
     </section>
+
+    <!-- Courses -->
+    <section>
+        <h1 class="course-title">Courses we offer</h1>
+        <div class="row">
+            <div class="courses courses__col-1">
+                <h3 class="course-title">Engineering</h3>
+                <p>
+                    LPU provides Instill knowledge in the major areas of Computer Science and Engineering such as Artificial Intelligence, Networking, Databases, 
+                    Data Analytics, Web Development, and Cloud Computing. LPU lays focus on Research & Development, Industrial Tie-Ups, Live Projects, International 
+                    Exposure, Start ups, Placements and definitely overall development.
+                </p>
+            </div>
+            <div class="courses courses__col-2">
+                <h3 class="course-title">Management and Administration</h3>
+                <p>
+                    This programme offers an optimum blend of theory and practice to provides a solid foundation in general business management with specializations in area of choice.
+                    ndustry certifications, MOOCs, Hackathons events, Workshops, Guest lectures, Educational Trips, Live projects, Incubation projects, 
+                    Community projects, projects with NGOs etc. are an integral part of curriculum.
+                </p>
+            </div>
+            <div class="courses courses__col-2">
+                <h3 class="course-title">Hospitality and Tourism</h3>
+                <p>
+                    LPU Hotel Management and Tourism Discipline is among India's best Hotel Management and Tourism colleges that grooms students through industry endorsed curriculum and 
+                    intensive service-oriented practicals with industry exposure in excellent infrastructure. The course is meant for students who wants a bright career in hospitality, tourism and airlines sector. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Campus -->
+    <section>
+        <h1 class="ourcampus">Our campus</h1>
+        <div class="row ourcampus-row">
+            <div class="ourcampus_picture">
+                <img src="Assets/ourcampus1.png" alt="ourcampus1">
+                <div class="layer"><h1>Engineering</h1></div>
+            </div>
+
+            <div class="ourcampus_picture">
+                <img src="Assets/ourcampus2.png" alt="ourcampus2">
+                <div class="layer"><h1>Agriculture</h1></div>
+            </div>
+
+            <div class="ourcampus_picture">
+                <img src="Assets/ourcampus3.png" alt="ourcampus3">
+                <div class="layer"><h1>Animation</h1></div>
+            </div>
+    </section>
+
+    <!-- Facilities -->
+    <section>
+        <h1 class="facilities">Campus Facilities</h1>
+        <div class="row facilities-row">
+            <div class="facility-col">
+                <img src="Assets/unimall.jpeg" alt="unimall">
+                <div class="description">
+                    <h3>Unimall</h3>
+                    <p>A crowd puller landmark which got everything from shopping to dining to entertainment.</p>
+                </div>
+            </div>
+
+            <div class="facility-col">
+                <img src="Assets/cafes.jpeg" alt="cafes">
+                <div class="description">
+                    <h3>Cafeterias</h3>
+                    <p>Best place to hang out with friends and to enjoy hot coffees, cold coffees, snacks and more.</p>
+                </div>
+            </div>
+
+            <div class="facility-col">
+                <img src="Assets/hostels.jpeg" alt="hostels">
+                <div class="description">
+                    <h3>Hostels</h3>
+                    <p>In campus comfortable residential facilities with house keeping, laundry, food and stationary.</p>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Javascript for side-menu -->
+    <script>
+        let nav = document.getElementById("navLinks");
+
+        function openMenu(){
+            nav.style.right = "0"
+        }
+
+        function closeMenu(){
+            nav.style.right = "-200px"
+        }
+    </script>
 </body>
 </html>
