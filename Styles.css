@@ -139,6 +139,94 @@ h1.course-title{
     box-shadow: 0 0 25px 0px rgba(0, 0, 0, 0.3);
 }
 
+/* Our Campus CSS  */
+.ourcampus{
+    font-size: 3em;
+    text-align: center;
+}
+
+.ourcampus-row{
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+.ourcampus_picture{
+    flex-basis: 30%;
+    position: relative;
+}
+
+.ourcampus_picture img{
+   height: 35rem;
+   width: 100%;
+   border-radius: 5px;
+}
+
+.layer{
+    background: transparent;
+    height: 35rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+.layer h1{
+    color: white;
+    width: 100%;
+    bottom: 0;
+    left: 85%;
+    transform: translateX(-50%);
+    position: inherit;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.layer:hover{
+    background: rgb(248,203,163,0.9);
+}
+
+.layer:hover h1{
+    bottom: 50%;
+    opacity: 1;
+}
+
+/* facilities */
+
+.facilities{
+    font-size: 3em;
+    text-align: center;
+}
+
+.facilities-row{
+    display: flex;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+.facility-col{
+    flex-basis: 31%;
+    position: relative;
+}
+
+.facility-col img{
+    height: 35rem;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.facility-col .description{
+    padding: 2%;
+}
+
+.facility-col p{
+    color: #988f8f;
+    font-size: 1em;
+    white-space: inherit;
+}
+
 /* -----  media-queries ----- */
 
 @media(max-width: 575px){
